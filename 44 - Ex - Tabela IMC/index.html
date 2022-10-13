@@ -11,28 +11,57 @@
 
     <section class="container">
         <h1>
-            Modelo de Teste
+            Tabela IMC 
         </h1>
 
+        <h2>
+            (Índice de massa corporal)
+        </h2>
+
         <p>
-            Nesse sistema com recursos de automação, podemos identificar no cenário atual, a facilidade em produzir documentos de cunho digital, atualizado conforme leis.
+            Calcule o seu <strong>Índice de Massa Corporal</strong> e veja como seu corpo está de acordo com essa tabela.
         </p>
+        
+        <section class="section-imc">
+            
+            <h2>IMC:</h2>
 
-        <form action="">
-            <label for="input1">Input 1:</label>
-            <input type="text" id="input1"><br>
+            <p>- Menos de <strong>18,5</strong></p>
+            <p>- Entre <strong>18,5 a 24,9</strong></p>
+            <p>- Entre <strong>25 a 29,9</strong></p>
+            <p>- Entre <strong>30 a 34,9</strong></p>
+            <p>- Entre <strong>35 e 39,9</strong></p>
+            <p>- Mais de <strong>40</strong></p>
 
-            <label for="input2">Input 2:</label>
-            <input type="text" id="input2"><br>
+        </section>
 
-            <label for="input3">Input 3:</label>
-            <input type="text" id="input3"><br>
+        <section class="section-resultado">
 
-            <label for="input4">Input 4:</label>
-            <input type="text" id="input4"><br>
+            <h2>Resultado:</h2>
 
-            <button id="botaoEnviar">ENVIAR</button>
+            <p>- Abaixo do peso</p>
+            <p>- Peso normal</p>
+            <p>- Sobrepeso</p>
+            <p>- Obesidade Grau 1</p>
+            <p>- Obesidade Grau 2</p>
+            <p>- Obesidade Grau 3</p>
+
+        </section>
+
+
+        <form action="" class="form">
+            <label for="input1">Peso:</label>
+            <input placeholder="Ex: 100" type="text" id="input1"><br>
+
+            <label for="input2">Altura:</label>
+            <input placeholder="Ex: 1.80" type="text" id="input2"><br>
+
+            <button id="botaoEnviar" onclick="tabelaImc()">CALCULAR IMC</button>
         </form>
+
+        <div class="resultado">
+
+        </div>
     </section>
 
     <script src="./js/index.js"></script>
