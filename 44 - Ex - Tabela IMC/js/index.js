@@ -45,12 +45,7 @@ function tabelaImc() {
             resultado.innerHTML += `Com o peso de: ${peso}Kg e a altura de: ${altura.toFixed(2)}m, o seu resultado é: <strong>${imc}</strong>. Portanto, <strong>obesidade grau 2</strong>.`
         } else if (imc >= 40) {
             resultado.innerHTML += `Com o peso de: ${peso}Kg e a altura de: ${altura.toFixed(2)}m, o seu resultado é: <strong>${imc}</strong>. Portanto, <strong>obesidade grau 3</strong>.`
-        }
-
-
-        //resultado.innerHTML += `Com o peso de: ${peso}Kg e a altura de: ${altura.toFixed(2)}m, o seu resultado é: ${imc}.`
-        
+        }        
     }
     form.addEventListener('submit', recebeEventoForm);
-   
 } 
