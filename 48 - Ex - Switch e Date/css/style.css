@@ -40,6 +40,13 @@ h1 {
     letter-spacing: 2px;
 }
 
+h2 {
+    color: var(--corPrincipal);
+    margin-left: 30px;
+    margin-right: 1px;
+    letter-spacing: -1px;
+}
+
 p {
     color: var(--corFonte);
     letter-spacing: -1px;

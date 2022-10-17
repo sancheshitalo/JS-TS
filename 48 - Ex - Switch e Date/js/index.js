@@ -1,45 +1,30 @@
-const resultado = document.querySelector('.resultado');
+const h2 = document.querySelector('.container h2');
+const data = new Date();
+
+function getDiaSemanaTexto(diaSemana) {
+   const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+   return diasDaSemana[diaSemana];
+}
+
+function getNomeMes(numeroMes) {
+    const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    return meses[numeroMes];
+}
 
 function zeroEsquerda(num) {
     return num >= 10 ? num : `0${num}`;
 }
 
-//
+function criaData(data) {
+    const diaSemana = data.getDay();
+    const numeroMes = data.getMonth();
+    const nomeDia = getDiaSemanaTexto(diaSemana);
+    const nomeMes = getNomeMes(numeroMes);
 
-function formataData(data) {
-    const dia = zeroEsquerda(data.getDate());
-    const mes = zeroEsquerda(data.getMonth());
-    const ano = zeroEsquerda(data.getFullYear());
-    const hora = zeroEsquerda(data.getHours());
-    const min = zeroEsquerda(data.getMinutes());
-    let diaSemana = data.getDay();
-
-    if (diaSemana === 0) {
-        return 'Domingo';
-    } else if (diaSemana === 1) {
-        return 'Segunda-feira';
-    } else if (diaSemana === 2) {
-        return 'Terça-feira';
-    } else if (diaSemana === 3) {
-        return 'Quarta-feira';
-    } else if (diaSemana === 4) {
-        return 'Quinta-feira';
-    } else if (diaSemana === 5) {
-        return 'Sexta-feira';
-    } else if (diaSemana === 6) {
-        return 'Sábado';
-    } else {
-        return 'Dia inválido! Por favor, confira.'
-    }
-    /*
-    if (mes === 0) {
-        return 'Janeiro';
-    } 
-    */
-    
-    resultado.innerHTML += `${dia} ${mes}${ano}${hora}${min}${diaSemana}`
-    
+    return (
+        `${nomeDia}, ${data.getDate()} de ${nomeMes} de ` +
+        `${data.getFullYear()} às ${zeroEsquerda(data.getHours())}:${zeroEsquerda(data.getMinutes())}`
+    );
 }
 
-let data = new Date();
-const dataBrasil = formataData(data);
+h2.innerHTML += criaData(data);
