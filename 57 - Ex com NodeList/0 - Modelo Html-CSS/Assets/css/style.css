@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
-    --corPrincipal: rgb(35, 73, 90);
+    --corPrincipal: #23495a;
     --corBranca: rgb(226, 211, 255);
     --corEscura: rgb(11, 31, 39);
     --corEscura2: rgb(4, 14, 19);
