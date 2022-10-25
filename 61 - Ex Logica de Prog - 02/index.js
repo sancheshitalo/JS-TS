@@ -1,11 +1,10 @@
+/*
 function ePaisagem(largura, altura) {
-    let largura;
-    let altura;
-
-    if (largura > altura) {
-        return true;
-    }
-    return false;
+   return largura > altura;
 }
+*/
 
-ePaisagem(100, 200);
+const ePaisagem = (largura, altura) => 
+    largura > altura;
+
+console.log(ePaisagem(1080, 1080))
