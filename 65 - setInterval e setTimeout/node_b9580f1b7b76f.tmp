@@ -1,0 +1,13 @@
+function mostraHora() {
+    const data = new Date();
+
+    return data.toLocaleTimeString('pt-br', {
+        hour12: false
+    });
+}
+
+function interval() {
+    console.log(mostraHora());
+}
+
+setInterval(interval, 5000);
