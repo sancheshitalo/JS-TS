@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --corPrincipal: rgb(35, 73, 90);
+    --corBranca: rgb(246, 242, 255);
+    --corEscura: rgb(11, 31, 39);
+    --corEscura2: rgb(4, 14, 19);
+    --corContraste: rgb(172, 245, 255);
+    --corFonte: rgb(51, 51, 51);
+    --corBorda: rgb(151, 151, 151);
+}
+
+body {
+    background-color: var(--corPrincipal);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background: var(--corBranca);
+    padding-left: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2)
+}
+
+h1 {
+    color: var(--corPrincipal);
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+
+p {
+    color: var(--corFonte);
+    letter-spacing: -1px;
+    margin-left: 30px;
+}
+
+label {
+    color: var(--corPrincipal);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -1px;
+    margin-left: 30px;
+    line-height: 45px;
+}
+
+input {
+    border: 2px solid var(--corBorda);
+    border-radius: 2px;
+    outline: 0;
+    width: 450px;
+    height: 25px;
+    padding-left: 8px;
+    font-size: 17px;
+    color: var(--corPrincipal);
+    border: 2px solid rgb(165, 165, 165);
+    font-weight: bold;
+}
+
+input:focus {
+    border: 2px solid var(--corPrincipal);
+}
+
+.btn-tarefa {
+    border: none;
+    background-color: var(--corPrincipal);
+    color: var(--corBranca);
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-tarefa:hover {
+    background-color: rgb(20, 170, 0);
+    transition: all ease-in-out 0.5s;
+}
+
+.btn-tarefa:active {
+    background-color:  rgb(14, 117, 0);
+}
+
+li {
+    color: var(--corPrincipal);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-left: 12px;
+}
+
+button {
+    border: none;
+    background-color: var(--corPrincipal);
+    color: var(--corBranca);
+    width: 22px;
+    height: 20px;
+    border-radius: 100px;
+    margin-left: 5px;
+    margin-top: 13px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(255, 94, 94);
+    transition: all ease-in-out 0.5s;
+}
+
+button:active {
+    background-color: rgb(160, 49, 49);
+    transition: all ease-in-out 0.3s;
+}
