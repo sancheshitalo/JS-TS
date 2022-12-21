@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --corPrincipal: rgb(35, 73, 90);
+    --corBranca: rgb(255, 255, 255);
+    --corEscura: rgb(11, 31, 39);
+    --corEscura2: rgb(4, 14, 19);
+    --corContraste: rgb(172, 245, 255);
+    --corFonte: rgb(51, 51, 51);
+    --corBorda: rgb(151, 151, 151);
+}
+
+body {
+    background-color: var(--corPrincipal);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background: var(--corBranca);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: var(--corPrincipal);
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+
+p {
+    color: var(--corFonte);
+    letter-spacing: -1px;
+    margin-left: 30px;
+}
+
+label {
+    color: var(--corPrincipal);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -1px;
+    margin-left: 30px;
+    line-height: 45px;
+}
+
+.calculadora {
+    width: 400px;
+    margin-right: 70px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.display {
+    border: 2px solid #ccc;
+    font-size: 2em;
+    width: 400px;
+    text-align: right;
+}
+
+.display:focus {
+    outline: none;
+}
+
+
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer
+}
+
+.btn:hover{
+    background-color: rgb(90, 90, 90);
+    color: white;
+}
+
