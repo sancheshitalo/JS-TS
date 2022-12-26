@@ -11,5 +11,5 @@
 // console.log(novo);
 
 const nome = 'Hitalo Marcel Bueno Sanches';
-const nomes = nome.split(' ');
+const nomes = nome.split(' ');                                   
 console.log(nomes);
