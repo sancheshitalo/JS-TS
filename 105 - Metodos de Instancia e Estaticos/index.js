@@ -14,4 +14,5 @@ class controleRemoto{
 }
 
 const c1 = new controleRemoto('TCL HK24');
+c1.aumentarVolume();
 console.log(c1)
