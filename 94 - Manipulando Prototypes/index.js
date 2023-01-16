@@ -10,3 +10,4 @@ Produto.prototype.desconto = function(percentual){
 const p1 = new Produto ('Camiseta', 50);
 p1.desconto(10);
 console.log(p1)
+
