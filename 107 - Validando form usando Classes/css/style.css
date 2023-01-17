@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
-    --corPrincipal: rgb(35, 73, 90);
-    --corBranca: rgb(247, 244, 255);
+    --corPrincipal: rgb(21, 90, 122);
+    --corBranca: rgb(255, 255, 255);
     --corEscura: rgb(11, 31, 39);
     --corEscura2: rgb(4, 14, 19);
     --corContraste: rgb(172, 245, 255);
@@ -32,18 +32,27 @@ body {
 
 h1 {
     color: var(--corPrincipal);
-    font-family: 'Bebas Neue';
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     font-weight: 900;
     margin-bottom: 0px;
-    margin-left: 35px;
-    letter-spacing: 2px;
+    margin-left: 40px;
+    letter-spacing: -1px;
+}
+
+div.errorMessage {
+    color: rgb(230, 105, 105);
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    letter-spacing: -1px;
 }
 
 p {
     color: var(--corFonte);
     letter-spacing: -1px;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-bottom: 15px;
     font-size: 20px;
 }
@@ -53,8 +62,8 @@ label {
     font-weight: 700;
     font-size: 19px;
     letter-spacing: -1px;
-    margin-left: 30px;
-    line-height: 45px;
+    margin-left: 40px;
+    line-height: 30px;
     text-align: left;
     display: block;
 }
@@ -64,13 +73,14 @@ input {
     border: 2px solid var(--corBorda);
     border-radius: 2px;
     outline: 0;
-    width: 50%;
+    width: 85%;
     height: 35px;
     padding-left: 8px;
     margin-left: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 7px;
     font-size: 17px;
-    color: var(--corBranca);
+    color: var(--corPrincipal);
+    font-weight: bold;
 }
 
 input:focus {
@@ -81,20 +91,21 @@ input:focus {
     border: none;
     background-color: var(--corPrincipal);
     color: var(--corBranca);
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
+    width: 90%;
+    height: 50px;
+    border-radius: 2px;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 30px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     cursor: pointer;
 }
 
 #botaoEnviar:hover {
-    background-color: var(--corEscura);
+    background-color: rgb(78, 219, 148);
     transition: all ease-in-out 0.3s;
+    color: var(--corPrincipal);
 }
 
 #botaoEnviar:active {
