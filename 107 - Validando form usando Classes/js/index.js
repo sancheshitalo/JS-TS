@@ -13,11 +13,36 @@ class ValidaFormulario{
     handleSubmit(e){
         e.preventDefault()
             const verificaCampos = this.verificaCampos();
+            const verifyPassword = this.verifyPassword();
+
+        if(verificaCampos && verifyPassword){
+            alert('Form enviado');
+            this.formulario.submit();
+        }
+    }
+
+    verifyPassword(){
+        let valid = true;
+
+        const password = this.formulario.querySelector('.senha');
+        const confirmPassword = this.formulario.querySelector('.repetir-senha');
+
+        if(password.value !== confirmPassword.value){
+            valid = false;
+            this.criaErro(password, 'As senhas não coincidem. Por favor, verifique.')
+            this.criaErro(confirmPassword, 'As senhas não coincidem. Por favor, verifique.')
+        }
+
+        if(password.value.length < 6 || password.value.length > 12){
+            valid = false;
+            this.criaErro(password, 'A senha precisa ter de 6 a 12 dígitos.')
+        }
+
+        return valid;
     }
 
     verificaCampos(){
         let valid = true;
-        console.log('msgErro2')
         for(let errorMessage of this.formulario.querySelectorAll('.errorMessage')){
             errorMessage.remove();
         }
@@ -26,16 +51,37 @@ class ValidaFormulario{
             const label = campo.previousElementSibling.innerText;
             
             if(!campo.value){
-                this.criaErro(campo, `O campo "${label}" não pode estar em branco`);
+                this.criaErro(campo, `O campo "${label}" não pode estar em branco.`);
                 valid = false;
-                console.log('msgErro3')
             }
 
             if(campo.classList.contains('cpf')) {
-                console.log('msgErro4')
                 if(!this.validaCPF(campo)) valid = false;
             }
+            
+            if(campo.classList.contains('usuario')) {
+                if(!this.validaUsuario(campo)) valid = false;
+            }
         }
+
+        return valid; 
+    }
+
+    validaUsuario(campo){
+        const usuario = campo.value;
+        let valid = true; 
+        
+        if(usuario.length < 3 || usuario.length > 12){
+            this.criaErro(campo, 'O usuário precisa ter 3 caracteres no mínimo, e 12 no máximo.');
+            valid = false;
+        }
+
+        if(!usuario.match(/^[a-zA-Z0-9]+$/g)){
+            this.criaErro(campo, 'O nome do usuário precisa conter apenas letras ou números.');
+            valid = false;
+        }
+
+        return valid;
     }
 
     validaCPF(campo){
