@@ -46,16 +46,6 @@ p {
     margin-left: 30px;
 }
 
-div.resultado{
-    color: var(--corPrincipal);
-    margin-left: 30px;
-    letter-spacing: -1px;
-}
-
-table{
-    width: 100%;
-}
-
 label {
     color: var(--corPrincipal);
     font-weight: 700;
