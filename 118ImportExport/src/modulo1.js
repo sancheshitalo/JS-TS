@@ -6,3 +6,4 @@ const cpf = '111.995.349-94';
 export function soma(x, y){
     return x + y
 }
+
