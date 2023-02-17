@@ -11,7 +11,7 @@
 export default function geraSenha(qtd, numeros, maiusculas, minusculas, simbolos){
     const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
     const geraNumero = () => String.fromCharCode(rand(48, 58))
-    const geraMaiuscula = () => String.fromCharCode(rand(65, 91));
+    const geraMaiuscula = () => String.fromCharCode(rand(65, 91))
     const geraMinuscula = () => String.fromCharCode(rand(97, 123))
     const geraSymbol = () => String.fromCharCode(rand(33, 44))
     
